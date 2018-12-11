@@ -134,11 +134,23 @@ function fahrenheit() {
 
 function inches() {
   const MILE = 63360;
+    /*using the keyword "const" a local block variable named "MILE" was initiatilized with the integer value
+    of 63360. Because this value was defined under the keyword "const," the value of this variable cannot
+    be reassigned or manipulated. */
   const YARD = 36;
+    /*using the keyword "const" a local block variable named "YES" was initiatilized with the integer value
+    of 36. Because this value was defined under the keyword "const," the value of this variable cannot
+    be reassigned or manipulated. */
   const FOOT = 12;
-
+  /*using the keyword "const" a local block variable named "FOOT" was initiatilized with the integer value
+  of 12. Because this value was defined under the keyword "const," the value of this variable cannot
+  be reassigned or manipulated. */
   let input = -1;
+  /*using the keyword "let" a local block variable named "input" was initiatilized with the integer
+  value of -1. */
   while (input < 0) {
+
+  /* */
     input = Number(prompt("Enter a non-negative integer."));
 
     if (input === null) {
