@@ -149,12 +149,22 @@ function inches() {
   /*using the keyword "let" a local block variable named "input" was initiatilized with the integer
   value of -1. */
   while (input < 0) {
-
-  /* */
+  /* Intilized a while loop with the condition that the block of code contained within this loop
+  will be repeated over and over again and not break as long as the value of the variable input is less than 0.*/
     input = Number(prompt("Enter a non-negative integer."));
-
+    /*The value of the variable input was reassigned with the value
+     of prompt() function and the string parameter of "Enter a non-negative integer"
+     so that the pop-up box (iniltized by the prompt() function) that will prompt the user for an input will also
+     display the message "Enter a non-negative integer." Since the input that the user will
+     provide via the pop-up box and prompt function has a data type of string, the Number() function,
+     a function that converts an object into a number was used so that the user input has a data type of integer.*/
     if (input === null) {
       break;
+
+      /*An if statement was created. If the variable input does not have any value (if the variable input does not
+      point to a specific object or array or reference) because the user did not enter a value, then this while loop
+      will break.*/
+
     } else if (Number.isNaN(input)) {
       input = -1;
     } else if (!Number.isInteger(input)) {
