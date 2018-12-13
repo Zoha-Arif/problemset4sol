@@ -160,21 +160,36 @@ function inches() {
      a function that converts an object into a number was used so that the user input has a data type of integer.*/
     if (input === null) {
       break;
-
       /*An if statement was created. If the variable input does not have any value (if the variable input does not
       point to a specific object or array or reference) because the user did not enter a value, then this while loop
       will break.*/
-
     } else if (Number.isNaN(input)) {
       input = -1;
+      /*An else if statement was created. If the variable input is not a number (NAN), as is checked by the
+      .isNaN() method (this method returns false if the value passed as a parameter is a number, so if this
+      statement is true than the value is not a number), then this else if statement will convert the value
+      of input back to -1, thus not satisfying the condition for the while loop to break (since -1 is
+      less than 0 and to break the while loop the value of input should be greater than 0), and causing the
+      while loop to loop again.*/
     } else if (!Number.isInteger(input)) {
       input = -1;
+      /*An else if statement was created. If the variable input is not an integer, as is checked by the
+      .isInteger() method, (this method returns false if the value passed as a parameter is an integer, so if this
+      statement is true than the value is not an integer), then this else if statement will convert the value of
+      input back to -1, thus not satisfying the condition for the while loop to break (since -1 is less than 0 and to
+      break the while loop the value of input should be greater than 0), and causing the while loop to
+      loop again.*/
     }
   }
 
   if (input !== null) {
+    /*An if statement was created. If the variable input is not null, meaning, has a value, than this
+    if statement will run */
     let inches = input;
+    /*The local block variable inches was created and its value was set to input*/
     let miles = Math.floor(inches / MILE);
+    /*The local block variable miles was its value was set to quotion of inches / Mile (this is to find how many inches
+  can fit in a mile). The Math.floor() function was used to round the quotient down.*/
     inches = inches % MILE;
     let yards = Math.floor(inches / YARD);
     inches = inches % YARD;
